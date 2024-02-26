@@ -1,0 +1,1979 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>嘸蝦米二碼字表格</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .color1, .color9 {
+            background-color: rgb(221, 221, 221);
+        }
+        .color2, .color10 {
+            background-color: rgb(160, 158, 158);
+        }
+        .color3, .color11 {
+            background-color: lightgreen;
+        }
+        .color4, .color12 {
+            background-color: orange;
+        }
+        .color5, .color13 {
+            background-color: skyblue;
+        }
+        .color6, .color14 {
+            background-color: pink;
+        }
+        .color7, .color15 {
+            background-color: rgb(234, 91, 115);
+        }
+        .color8, .color16 {
+            background-color: red;
+        }
+
+        table {
+            border-collapse: collapse;
+            text-align: center;
+            margin: 0 auto;
+            font-size: 22px;
+        }
+        th, td{
+            width: 35px;
+            height: 35px;
+            padding: 2px;
+        }
+        tr {
+            border-bottom: 1px solid black;
+        }
+        label {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            margin: 10px 0px 10px 20px;
+        }
+        .borderRight {
+            border-right: 1px solid black;
+        }
+
+        .toggle-switch {
+        position: relative;
+        display: inline-block;
+        width: 40px; /* 调整宽度 */
+        height: 20px; /* 调整高度 */
+        margin-right: 10px;
+        }
+
+        .toggle-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            border-radius: 20px; /* 调整圆角半径 */
+            transition: .4s;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 16px; /* 调整内部圆圈的高度 */
+            width: 16px; /* 调整内部圆圈的宽度 */
+            left: 2px;
+            bottom: 2px;
+            background-color: white;
+            border-radius: 50%;
+            transition: .4s;
+        }
+
+        .toggles {
+            display: flex;
+            flex-wrap: wrap; /* 允许换行 */
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* 不同颜色的设置 */
+        .toggle-switch input:checked + .slider1 {
+            background-color: rgb(221, 221, 221); /* 第一个 toggle-switch 被打开后的颜色 */
+        }
+        .toggle-switch input:checked + .slider2 {
+            background-color: rgb(160, 158, 158); /* 第二个 toggle-switch 被打开后的颜色 */
+        }
+        .toggle-switch input:checked + .slider3 {
+            background-color: lightgreen; 
+        }
+        .toggle-switch input:checked + .slider4 {
+            background-color: orange; 
+        }
+        .toggle-switch input:checked + .slider5 {
+            background-color: skyblue; 
+        }
+        .toggle-switch input:checked + .slider6 {
+            background-color: pink; 
+        }
+        .toggle-switch input:checked + .slider7 {
+            background-color: rgb(234, 91, 115); 
+        }
+        .toggle-switch input:checked + .slider8 {
+            background-color: red; 
+        }
+        .toggle-switch input:checked + .slider9 {
+            background-color: rgb(221, 221, 221); 
+        }
+        .toggle-switch input:checked + .slider10 {
+            background-color: rgb(160, 158, 158); 
+        }
+        .toggle-switch input:checked + .slider11 {
+            background-color: lightgreen; 
+        }
+        .toggle-switch input:checked + .slider12 {
+            background-color: orange; 
+        }
+        .toggle-switch input:checked + .slider13 {
+            background-color: skyblue; 
+        }
+        .toggle-switch input:checked + .slider14 {
+            background-color: pink; 
+        }
+        .toggle-switch input:checked + .slider15 {
+            background-color: rgb(234, 91, 115); 
+        }
+        .toggle-switch input:checked + .slider16 {
+            background-color: red; 
+        }
+        .toggle-switch input:checked + .slider17 {
+            background-color: #000000;
+        }
+
+        input:checked + .slider:before {
+            transform: translateX(20px); /* 调整内部圆圈的偏移距离 */
+        }
+        
+        .hidden-text {
+            color: transparent;
+        }
+
+        .card-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0px 100px 20px 100px;
+        padding: 20px;
+        background-color: #f0f0f0; /* 卡片背景色 */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 卡片阴影效果 */
+        border-radius: 40px; /* 卡片圆角 */
+        }
+
+
+      </style>
+      <script>
+        // JavaScript 用于处理 toggle 的点击事件
+        function toggleElement(elementClass, colorClass) {
+            var elements = document.getElementsByClassName(elementClass);
+            for (var i = 0; i < elements.length; i++) {
+                elements[i].classList.toggle(colorClass);
+            }
+        }
+        function toggleText(elementClass) {
+            // 获取表格内指定元素的引用
+            var elements = document.getElementsByClassName(elementClass);
+            // 遍历元素集合，并为每个元素切换是否应用隐藏文字的样式
+            for (var i = 0; i < elements.length; i++) {
+                elements[i].classList.toggle('hidden-text');
+            }
+        }
+      </script>
+</head>
+
+<body>
+
+    <header>
+        <h1>兩碼字表</h1>
+        <p>Est. Jan. 17, 2024</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">主頁</a></li>
+            <li><a href="index2.html">其他</a></li>
+        </ul>
+    </nav>
+
+    <main style="background-color: bisque; padding: 20px 0px;">
+    <div class="card-container">
+        <div class="toggles">
+            <label>
+                <div class="toggle-switch">
+                    <input type="checkbox" onclick="toggleElement('element1', 'color1')">
+                    <div class="slider slider1"></div>
+                </div>
+                標準字根
+            </label>
+            <label>
+                <div class="toggle-switch">
+                    <input type="checkbox" onclick="toggleElement('element2', 'color2')">
+                    <div class="slider slider2"></div>
+                </div>
+                簡速字根
+            </label>
+            <label>
+                <div class="toggle-switch">
+                    <input type="checkbox" onclick="toggleElement('element3', 'color3')">
+                    <div class="slider slider3"></div>
+                </div>
+                頭尾碼
+            </label>
+            <label>
+                <div class="toggle-switch">
+                    <input type="checkbox" onclick="toggleElement('element4', 'color4')">
+                    <div class="slider slider4"></div>
+                </div>
+                形音義結合
+            </label>
+            <label>
+                <div class="toggle-switch">
+                    <input type="checkbox" onclick="toggleElement('element5', 'color5')">
+                    <div class="slider slider5"></div>
+                </div>
+                簡體字
+            </label>
+            <label>
+                <div class="toggle-switch">
+                    <input type="checkbox" onclick="toggleElement('element6', 'color6')">
+                    <div class="slider slider6"></div>
+                </div>
+                隨取兩碼
+            </label>
+            <label>
+                <div class="toggle-switch">
+                    <input type="checkbox" onclick="toggleElement('element7', 'color7')">
+                    <div class="slider slider7"></div>
+                </div>
+                一碼硬配
+            </label>
+            <label>
+                <div class="toggle-switch">
+                    <input type="checkbox" onclick="toggleElement('element8', 'color8')">
+                    <div class="slider slider8"></div>
+                </div>
+                兩碼硬配
+            </label>
+        </div>
+    </div>
+
+    <!-- 表格 -->
+    <div class="card-container">
+        <table>
+            <tr>
+                <th class="borderRight"></th>
+                <th>對</th>
+                <th>八</th>
+                <th>七</th>
+                <th>的</th>
+                <th>一</th>
+                <th>四</th>
+                <th>機</th>
+                <th>時</th>
+                <th>後</th>
+                <th>十</th>
+                <th>九</th>
+                <th>六</th>
+                <th>滿</th>
+                <th>南</th>
+                <th>〇</th>
+                <th>備</th>
+                <th>高</th>
+                <th>二</th>
+                <th>三</th>
+                <th>通</th>
+                <th>以</th>
+                <th>要</th>
+                <th>五</th>
+                <th>有</th>
+                <th>益</th>
+                <th>整</th>
+            </tr>
+            <tr>
+                <th class="borderRight"></th>
+                <th>A</th>
+                <th>B</th>
+                <th>C</th>
+                <th>D</th>
+                <th>E</th>
+                <th>F</th>
+                <th>G</th>
+                <th>H</th>
+                <th>I</th>
+                <th>J</th>
+                <th>K</th>
+                <th>L</th>
+                <th>M</th>
+                <th>N</th>
+                <th>O</th>
+                <th>P</th>
+                <th>Q</th>
+                <th>R</th>
+                <th>S</th>
+                <th>T</th>
+                <th>U</th>
+                <th>V</th>
+                <th>W</th>
+                <th>X</th>
+                <th>Y</th>
+                <th>Z</th>
+            </tr>
+            <tr>
+                <th class="borderRight">A</th>
+                <td class="element1">寸</td>
+                <td class="element3">鎮</td>
+                <td class="element7">鏡</td>
+                <td class="element3">會</td>
+                <td class="element1">金</td>
+                <td class="element3">鑑</td>
+                <td class="element3">威</td>
+                <td class="element3">感</td>
+                <td class="element2">俞</td>
+                <td class="element2">華</td>
+                <td class="element6">駐</td>
+                <td class="element1">也</td>
+                <td class="element6">貪</td>
+                <td class="element2">良</td>
+                <td class="element7">點</td>
+                <td class="element3">救</td>
+                <td class="element3">錢</td>
+                <td class="element3">創</td>
+                <td class="element3">戚</td>
+                <td class="element5">術</td>
+                <td class="element4">澳</td>
+                <td class="element7">族</td>
+                <td class="element3">錄</td>
+                <td class="element6">貸</td>
+                <td class="element2">成</td>
+                <td class="element3">之</td>
+            </tr>
+            <tr>
+                <th class="borderRight">B</th>
+                <td class="element1">不</td>
+                <td class="element3">資</td>
+                <td class="element6">凍</td>
+                <td class="element3">階</td>
+                <td class="element2">並</td>
+                <td class="element3">為</td>
+                <td class="element7">障</td>
+                <td class="element3">隱</td>
+                <td class="element2">前</td>
+                <td class="element1">半</td>
+                <td class="element3">全</td>
+                <td class="element1">比</td>
+                <td class="element3">陽</td>
+                <td class="element1">人</td>
+                <td class="element2">曾</td>
+                <td class="element1">入</td>
+                <td class="element3">隊</td>
+                <td class="element3">院</td>
+                <td class="element3">隆</td>
+                <td class="element3">隔</td>
+                <td class="element3">舒</td>
+                <td class="element7">善</td>
+                <td class="element3">遵</td>
+                <td class="element2">義</td>
+                <td class="element3">墜</td>
+                <td class="element3">凝</td>
+            </tr>
+            <tr>
+                <th class="borderRight">C</th>
+                <td class="element1">夕</td>
+                <td class="element3">輿</td>
+                <td class="element3">屬</td>
+                <td class="element3">屠</td>
+                <td class="element4">溪</td>
+                <td class="element8">宣</td>
+                <td class="element7">履</td>
+                <td class="element3">擊</td>
+                <td class="element1">中</td>
+                <td class="element1">車</td>
+                <td class="element7">夠</td>
+                <td class="element1">巴</td>
+                <td class="element7">慰</td>
+                <td class="element1">央</td>
+                <td class="element1">西</td>
+                <td class="element1">尸</td>
+                <td class="element3">輻</td>
+                <td class="element3">剝</td>
+                <td class="element3">繫</td>
+                <td class="element8">禍</td>
+                <td class="element3">殿</td>
+                <td class="element3">覆</td>
+                <td class="element3">遲</td>
+                <td class="element1">史</td>
+                <td class="element3">壁</td>
+                <td class="element7">捷</td>
+            </tr>
+            <tr>
+                <th class="borderRight">D</th>
+                <td class="element1">歹</td>
+                <td class="element3">顯</td>
+                <td class="element8">待</td>
+                <td class="element4">得</td>
+                <td class="element1">豆</td>
+                <td class="element3">照</td>
+                <td class="element7">貿</td>
+                <td class="element8">導</td>
+                <td class="element1">鬥</td>
+                <td class="element1">斗</td>
+                <td class="element3">裂</td>
+                <td class="element2">既</td>
+                <td class="element3">影</td>
+                <td class="element1">大</td>
+                <td class="element1">日</td>
+                <td class="element1">刀</td>
+                <td class="element3">殘</td>
+                <td class="element3">晚</td>
+                <td class="element3">景</td>
+                <td class="element3">題</td>
+                <td class="element4">渡</td>
+                <td class="element7">召</td>
+                <td class="element3">暴</td>
+                <td class="element1">力</td>
+                <td class="element1">力</td>
+                <td class="element8">債</td>
+            </tr>
+            <tr>
+                <th class="borderRight">E</th>
+                <td class="element1">與</td>
+                <td class="element3">兩</td>
+                <td class="element3">融</td>
+                <td class="element3">習</td>
+                <td class="element1">丑</td>
+                <td class="element5">靈</td>
+                <td class="element3">妥</td>
+                <td class="element3">群</td>
+                <td class="element1">山</td>
+                <td class="element3">辭</td>
+                <td class="element3">釀</td>
+                <td class="element1">屯</td>
+                <td class="element3">彩</td>
+                <td class="element2">夷</td>
+                <td class="element2">司</td>
+                <td class="element2">易</td>
+                <td class="element3">舉</td>
+                <td class="element3">劃</td>
+                <td class="element3">崇</td>
+                <td class="element3">頸</td>
+                <td class="element3">段</td>
+                <td class="element7">峻</td>
+                <td class="element3">逼</td>
+                <td class="element1">尹</td>
+                <td class="element3">再</td>
+                <td class="element3">正</td>
+            </tr>
+            <tr>
+                <th class="borderRight">F</th>
+                <td class="element1">下</td>
+                <td class="element3">顧</td>
+                <td class="element3">螢</td>
+                <td class="element3">豐</td>
+                <td class="element1">上</td>
+                <td class="element6">營</td>
+                <td class="element7">旗</td>
+                <td class="element3">慧</td>
+                <td class="element3">歐</td>
+                <td class="element1">飛</td>
+                <td class="element3">斷</td>
+                <td class="element1">亡</td>
+                <td class="element3">督</td>
+                <td class="element1">火</td>
+                <td class="element1">曲</td>
+                <td class="element1">戶</td>
+                <td class="element4">富</td>
+                <td class="element7">業</td>
+                <td class="element3">匪</td>
+                <td class="element3">榮</td>
+                <td class="element7">胡</td>
+                <td class="element7">區</td>
+                <td class="element3">爆</td>
+                <td class="element2">發</td>
+                <td class="element1">方</td>
+                <td class="element3">疑</td>
+            </tr>
+            <tr>
+                <th class="borderRight">G</th>
+                <td class="element1">瓜</td>
+                <td class="element4">幾</td>
+                <td class="element7">獎</td>
+                <td class="element3">動</td>
+                <td class="element2">垂</td>
+                <td class="element4">艦</td>
+                <td class="element4">己</td>
+                <td class="element3">怒</td>
+                <td class="element2">即</td>
+                <td class="element1">千</td>
+                <td class="element3">裝</td>
+                <td class="element2">就</td>
+                <td class="element6">媽</td>
+                <td class="element1">夾</td>
+                <td class="element1">甘</td>
+                <td class="element4">教</td>
+                <td class="element3">重</td>
+                <td class="element3">剩</td>
+                <td class="element3">乘</td>
+                <td class="element7">娛</td>
+                <td class="element3">毀</td>
+                <td class="element1">干</td>
+                <td class="element5">遷</td>
+                <td class="element1">女</td>
+                <td class="element2">旁</td>
+                <td class="element3">好</td>
+            </tr>
+            <tr>
+                <th class="borderRight">H</th>
+                <td class="element1">心</td>
+                <td class="element3">積</td>
+                <td class="element7">程</td>
+                <td class="element3">懊</td>
+                <td class="element2">或</td>
+                <td class="element7">悅</td>
+                <td class="element6">麵</td>
+                <td class="element3">穩</td>
+                <td class="element8">幫</td>
+                <td class="element1">手</td>
+                <td class="element3">懷</td>
+                <td class="element2">巷</td>
+                <td class="element3">悔</td>
+                <td class="element2">很</td>
+                <td class="element2">首</td>
+                <td class="element3">必</td>
+                <td class="element3">懂</td>
+                <td class="element3">稅</td>
+                <td class="element3">慌</td>
+                <td class="element3">頹</td>
+                <td class="element3">悄</td>
+                <td class="element3">惟</td>
+                <td class="element3">黎</td>
+                <td class="element2">愛</td>
+                <td class="element3">稱</td>
+                <td class="element7">靜</td>
+            </tr>
+            <tr>
+                <th class="borderRight">I</th>
+                <td class="element2">應</td>
+                <td class="element3">讀</td>
+                <td class="element3">鞏</td>
+                <td class="element3">誤</td>
+                <td class="element1">工</td>
+                <td class="element7">跡</td>
+                <td class="element3">譯</td>
+                <td class="element3">恐</td>
+                <td class="element2">申</td>
+                <td class="element2">甫</td>
+                <td class="element3">讓</td>
+                <td class="element6">該</td>
+                <td class="element3">誨</td>
+                <td class="element1">欠</td>
+                <td class="element1">言</td>
+                <td class="element3">評</td>
+                <td class="element7">讚</td>
+                <td class="element3">說</td>
+                <td class="element3">謊</td>
+                <td class="element7">譴</td>
+                <td class="element3">護</td>
+                <td class="element7">試</td>
+                <td class="element3">誕</td>
+                <td class="element1">我</td>
+                <td class="element3">講</td>
+                <td class="element7">掀</td>
+            </tr>
+            <tr>
+                <th class="borderRight">J</th>
+                <td class="element2">祭</td>
+                <td class="element3">戴</td>
+                <td class="element3">載</td>
+                <td class="element3">換</td>
+                <td class="element2">直</td>
+                <td class="element3">撫</td>
+                <td class="element3">幹</td>
+                <td class="element3">惠</td>
+                <td class="element3">控</td>
+                <td class="element1">井</td>
+                <td class="element3">裁</td>
+                <td class="element7">擒</td>
+                <td class="element6">損</td>
+                <td class="element2">是</td>
+                <td class="element3">搶</td>
+                <td class="element3">撤</td>
+                <td class="element7">協</td>
+                <td class="element3">刺</td>
+                <td class="element3">排</td>
+                <td class="element3">栽</td>
+                <td class="element3">搬</td>
+                <td class="element3">擁</td>
+                <td class="element3">挺</td>
+                <td class="element2">故</td>
+                <td class="element3">挫</td>
+                <td class="element3">擬</td>
+            </tr>
+            <tr>
+                <th class="borderRight">K</th>
+                <td class="element1">黃</td>
+                <td class="element3">質</td>
+                <td class="element8">冠</td>
+                <td class="element6">潛</td>
+                <td class="element1">王</td>
+                <td class="element6">薦</td>
+                <td class="element8">授</td>
+                <td class="element6">懲</td>
+                <td class="element1">斤</td>
+                <td class="element5">開</td>
+                <td class="element3">環</td>
+                <td class="element2">甚</td>
+                <td class="element3">氣</td>
+                <td class="element5">長</td>
+                <td class="element2">咸</td>
+                <td class="element6">徵</td>
+                <td class="element3">理</td>
+                <td class="element3">弄</td>
+                <td class="element4">靠</td>
+                <td class="element8">賞</td>
+                <td class="element7">趣</td>
+                <td class="element7">兵</td>
+                <td class="element3">廷</td>
+                <td class="element6">養</td>
+                <td class="element3">基</td>
+                <td class="element8">贊</td>
+            </tr>
+            <tr>
+                <th class="borderRight">L</th>
+                <td class="element5">麗</td>
+                <td class="element3">病</td>
+                <td class="element7">磁</td>
+                <td class="element3">勵</td>
+                <td class="element1">立</td>
+                <td class="element3">熟</td>
+                <td class="element4">疾</td>
+                <td class="element3">廳</td>
+                <td class="element2">新</td>
+                <td class="element1">辛</td>
+                <td class="element3">哀</td>
+                <td class="element2">親</td>
+                <td class="element3">彰</td>
+                <td class="element1">來</td>
+                <td class="element2">路</td>
+                <td class="element5">廠</td>
+                <td class="element3">痛</td>
+                <td class="element3">競</td>
+                <td class="element3">牽</td>
+                <td class="element3">碟</td>
+                <td class="element3">厲</td>
+                <td class="element3">確</td>
+                <td class="element3">麼</td>
+                <td class="element2">夜</td>
+                <td class="element3">壓</td>
+                <td class="element3">礎</td>
+            </tr>
+            <tr>
+                <th class="borderRight">M</th>
+                <td class="element2">買</td>
+                <td class="element3">類</td>
+                <td class="element3">矚</td>
+                <td class="element3">盼</td>
+                <td class="element1">且</td>
+                <td class="element3">關</td>
+                <td class="element3">釋</td>
+                <td class="element3">德</td>
+                <td class="element1">門</td>
+                <td class="element1">冊</td>
+                <td class="element3">往</td>
+                <td class="element1">毛</td>
+                <td class="element3">循</td>
+                <td class="element1">米</td>
+                <td class="element1">目</td>
+                <td class="element1">矛</td>
+                <td class="element3">驟</td>
+                <td class="element3">閱</td>
+                <td class="element3">縣</td>
+                <td class="element3">衝</td>
+                <td class="element3">睛</td>
+                <td class="element7">行</td>
+                <td class="element6">邊</td>
+                <td class="element2">曼</td>
+                <td class="element1">門</td>
+                <td class="element3">從</td>
+            </tr>
+            <tr>
+                <th class="borderRight">N</th>
+                <td class="element2">求</td>
+                <td class="element3">賽</td>
+                <td class="element3">觸</td>
+                <td class="element3">突</td>
+                <td class="element1">角</td>
+                <td class="element3">寫</td>
+                <td class="element3">安</td>
+                <td class="element3">憲</td>
+                <td class="element7">市</td>
+                <td class="element1">巾</td>
+                <td class="element3">究</td>
+                <td class="element2">包</td>
+                <td class="element3">勿</td>
+                <td class="element2">象</td>
+                <td class="element2">周</td>
+                <td class="element3">危</td>
+                <td class="element3">幅</td>
+                <td class="element3">剛</td>
+                <td class="element3">宗</td>
+                <td class="element3">額</td>
+                <td class="element3">竊</td>
+                <td class="element7">久</td>
+                <td class="element3">逸</td>
+                <td class="element2">敬</td>
+                <td class="element3">塞</td>
+                <td class="element3">定</td>
+            </tr>
+            <tr>
+                <th class="borderRight">O</th>
+                <td class="element2">貫</td>
+                <td class="element3">圓</td>
+                <td class="element3">囑</td>
+                <td class="element3">因</td>
+                <td class="element1">亞</td>
+                <td class="element3">距</td>
+                <td class="element3">蹈</td>
+                <td class="element7">啊</td>
+                <td class="element7">誓</td>
+                <td class="element2">單</td>
+                <td class="element3">園</td>
+                <td class="element3">號</td>
+                <td class="element7">器</td>
+                <td class="element3">跑</td>
+                <td class="element1">口</td>
+                <td class="element3">圈</td>
+                <td class="element3">戰</td>
+                <td class="element3">唬</td>
+                <td class="element3">圍</td>
+                <td class="element7">圖</td>
+                <td class="element3">嘲</td>
+                <td class="element7">品</td>
+                <td class="element3">選</td>
+                <td class="element2">嚴</td>
+                <td class="element6">嚇</td>
+                <td class="element6">跌</td>
+            </tr>
+            <tr>
+                <th class="borderRight">P</th>
+                <td class="element1">卜</td>
+                <td class="element3">貨</td>
+                <td class="element3">使</td>
+                <td class="element3">候</td>
+                <td class="element1">至</td>
+                <td class="element3">儘</td>
+                <td class="element3">牌</td>
+                <td class="element3">億</td>
+                <td class="element3">譬</td>
+                <td class="element1">平</td>
+                <td class="element3">依</td>
+                <td class="element7">卷</td>
+                <td class="element3">自</td>
+                <td class="element2">條</td>
+                <td class="element2">個</td>
+                <td class="element2">修</td>
+                <td class="element7">歸</td>
+                <td class="element3">側</td>
+                <td class="element3">係</td>
+                <td class="element3">停</td>
+                <td class="element3">偶</td>
+                <td class="element7">泉</td>
+                <td class="element3">邀</td>
+                <td class="element1">皮</td>
+                <td class="element1">片</td>
+                <td class="element3">促</td>
+            </tr>
+            <tr>
+                <th class="borderRight">Q</th>
+                <td class="element2">貴</td>
+                <td class="element3">弱</td>
+                <td class="element3">獨</td>
+                <td class="element3">體</td>
+                <td class="element1">里</td>
+                <td class="element6">默</td>
+                <td class="element3">弧</td>
+                <td class="element3">愚</td>
+                <td class="element3">甲</td>
+                <td class="element2">畢</td>
+                <td class="element1">弓</td>
+                <td class="element2">規</td>
+                <td class="element7">們</td>
+                <td class="element1">兼</td>
+                <td class="element1">田</td>
+                <td class="element7">繳</td>
+                <td class="element7">蒙</td>
+                <td class="element3">界</td>
+                <td class="element3">獵</td>
+                <td class="element8">悲</td>
+                <td class="element3">獲</td>
+                <td class="element7">懼</td>
+                <td class="element3">遇</td>
+                <td class="element1">丈</td>
+                <td class="element7">酬</td>
+                <td class="element7">跟</td>
+            </tr>
+            <tr>
+                <th class="borderRight">R</th>
+                <td class="element2">兆</td>
+                <td class="element3">共</td>
+                <td class="element3">輩</td>
+                <td class="element3">著</td>
+                <td class="element1">臣</td>
+                <td class="element3">聯</td>
+                <td class="element3">舊</td>
+                <td class="element3">聽</td>
+                <td class="element2">而</td>
+                <td class="element1">耳</td>
+                <td class="element2">考</td>
+                <td class="element1">儿</td>
+                <td class="element7">惹</td>
+                <td class="element2">樂</td>
+                <td class="element3">落</td>
+                <td class="element1">乃</td>
+                <td class="element3">福</td>
+                <td class="element3">視</td>
+                <td class="element3">非</td>
+                <td class="element3">藝</td>
+                <td class="element3">萬</td>
+                <td class="element6">臨</td>
+                <td class="element3">遭</td>
+                <td class="element1">爾</td>
+                <td class="element7">勒</td>
+                <td class="element7">微</td>
+            </tr>
+            <tr>
+                <th class="borderRight">S</th>
+                <td class="element1">小</td>
+                <td class="element3">續</td>
+                <td class="element3">輝</td>
+                <td class="element3">縮</td>
+                <td class="element1">生</td>
+                <td class="element3">黨</td>
+                <td class="element4">績</td>
+                <td class="element3">總</td>
+                <td class="element1">川</td>
+                <td class="element1">牛</td>
+                <td class="element3">製</td>
+                <td class="element1">世</td>
+                <td class="element3">省</td>
+                <td class="element3">常</td>
+                <td class="element2">當</td>
+                <td class="element1">少</td>
+                <td class="element3">緣</td>
+                <td class="element3">覺</td>
+                <td class="element3">綜</td>
+                <td class="element4">街</td>
+                <td class="element4">淑</td>
+                <td class="element7">線</td>
+                <td class="element3">繼</td>
+                <td class="element1">身</td>
+                <td class="element3">堂</td>
+                <td class="element3">縱</td>
+            </tr>
+            <tr>
+                <th class="borderRight">T</th>
+                <td class="element2">頁</td>
+                <td class="element3">檢</td>
+                <td class="element5">夢</td>
+                <td class="element4">替</td>
+                <td class="element8">臺</td>
+                <td class="element7">碼</td>
+                <td class="element3">樓</td>
+                <td class="element3">想</td>
+                <td class="element1">丁</td>
+                <td class="element7">面</td>
+                <td class="element6">極</td>
+                <td class="element2">充</td>
+                <td class="element3">相</td>
+                <td class="element1">木</td>
+                <td class="element3">可</td>
+                <td class="element2">弟</td>
+                <td class="element3">棒</td>
+                <td class="element3">械</td>
+                <td class="element3">標</td>
+                <td class="element6">哥</td>
+                <td class="element3">樣</td>
+                <td class="element7">模</td>
+                <td class="element7">禁</td>
+                <td class="element2">更</td>
+                <td class="element3">構</td>
+                <td class="element3">楚</td>
+            </tr>
+            <tr>
+                <th class="borderRight">U</th>
+                <td class="element1">雨</td>
+                <td class="element3">預</td>
+                <td class="element7">遣</td>
+                <td class="element3">勝</td>
+                <td class="element1">月</td>
+                <td class="element3">熊</td>
+                <td class="element3">脾</td>
+                <td class="element3">態</td>
+                <td class="element1">予</td>
+                <td class="element1">于</td>
+                <td class="element7">粵</td>
+                <td class="element2">能</td>
+                <td class="element3">參</td>
+                <td class="element1">永</td>
+                <td class="element3">台</td>
+                <td class="element1">才</td>
+                <td class="element7">鮮</td>
+                <td class="element3">脫</td>
+                <td class="element7">罪</td>
+                <td class="element6">衡</td>
+                <td class="element3">服</td>
+                <td class="element8">越</td>
+                <td class="element3">遙</td>
+                <td class="element1">又</td>
+                <td class="element3">墾</td>
+                <td class="element7">腳</td>
+            </tr>
+            <tr>
+                <th class="borderRight">V</th>
+                <td class="element1">鬼</td>
+                <td class="element7">賴</td>
+                <td class="element8">副</td>
+                <td class="element3">智</td>
+                <td class="element1">佳</td>
+                <td class="element3">無</td>
+                <td class="element3">矮</td>
+                <td class="element3">怎</td>
+                <td class="element7">差</td>
+                <td class="element1">弗</td>
+                <td class="element7">表</td>
+                <td class="element2">覽</td>
+                <td class="element3">每</td>
+                <td class="element8">邁</td>
+                <td class="element2">詹</td>
+                <td class="element3">複</td>
+                <td class="element3">裡</td>
+                <td class="element7">介</td>
+                <td class="element3">舞</td>
+                <td class="element3">集</td>
+                <td class="element3">鬆</td>
+                <td class="element8">、</td>
+                <td class="element7">速</td>
+                <td class="element2">敏</td>
+                <td class="element1">万</td>
+                <td class="element6">礙</td>
+            </tr>
+            <tr>
+                <th class="borderRight">W</th>
+                <td class="element1">瓦</td>
+                <td class="element3">顏</td>
+                <td class="element3">濁</td>
+                <td class="element3">響</td>
+                <td class="element2">武</td>
+                <td class="element3">濕</td>
+                <td class="element7">溉</td>
+                <td class="element3">濾</td>
+                <td class="element1">了</td>
+                <td class="element1">午</td>
+                <td class="element3">漲</td>
+                <td class="element4">流</td>
+                <td class="element3">海</td>
+                <td class="element1">水</td>
+                <td class="element2">谷</td>
+                <td class="element3">激</td>
+                <td class="element3">灣</td>
+                <td class="element3">測</td>
+                <td class="element3">漂</td>
+                <td class="element3">梁</td>
+                <td class="element3">法</td>
+                <td class="element1">巫</td>
+                <td class="element3">滋</td>
+                <td class="element1">文</td>
+                <td class="element3">洲</td>
+                <td class="element7">汽</td>
+            </tr>
+            <tr>
+                <th class="borderRight">X</th>
+                <td class="element2">專</td>
+                <td class="element7">鄰</td>
+                <td class="element7">蜜</td>
+                <td class="element7">藉</td>
+                <td class="element7">密</td>
+                <td class="element7">網</td>
+                <td class="element8">諸</td>
+                <td class="element7">徐</td>
+                <td class="element2">鄉</td>
+                <td class="element1">升</td>
+                <td class="element2">夸</td>
+                <td class="element2">奄</td>
+                <td class="element8">儲</td>
+                <td class="element1">食</td>
+                <td class="element2">商</td>
+                <td class="element1">牙</td>
+                <td class="element7">蓄</td>
+                <td class="element7">薄</td>
+                <td class="element7">綠</td>
+                <td class="element7">操</td>
+                <td class="element3">殺</td>
+                <td class="element8">贏</td>
+                <td class="element6">隨</td>
+                <td class="element1">氏</td>
+                <td class="element3">在</td>
+                <td class="element3">存</td>
+            </tr>
+            <tr>
+                <th class="borderRight">Y</th>
+                <td class="element2">原</td>
+                <td class="element3">都</td>
+                <td class="element5">聲</td>
+                <td class="element3">勢</td>
+                <td class="element1">士</td>
+                <td class="element3">熱</td>
+                <td class="element3">趕</td>
+                <td class="element3">摯</td>
+                <td class="element3">款</td>
+                <td class="element2">幸</td>
+                <td class="element3">壞</td>
+                <td class="element3">起</td>
+                <td class="element3">趁</td>
+                <td class="element2">厭</td>
+                <td class="element3">超</td>
+                <td class="element1">牙</td>
+                <td class="element7">嘉</td>
+                <td class="element3">境</td>
+                <td class="element3">末</td>
+                <td class="element3">願</td>
+                <td class="element3">報</td>
+                <td class="element1">土</td>
+                <td class="element3">遠</td>
+                <td class="element2">憂</td>
+                <td class="element3">州</td>
+                <td class="element3">執</td>
+            </tr>
+            <tr>
+                <th class="borderRight">Z</th>
+                <td class="element1">舟</td>
+                <td class="element3">籲</td>
+                <td class="element7">趨</td>
+                <td class="element3">籍</td>
+                <td class="element1">止</td>
+                <td class="element3">盤</td>
+                <td class="element3">孤</td>
+                <td class="element3">慮</td>
+                <td class="element1">竹</td>
+                <td class="element1">子</td>
+                <td class="element3">虧</td>
+                <td class="element1">乙</td>
+                <td class="element6">偵</td>
+                <td class="element2">餐</td>
+                <td class="element6">店</td>
+                <td class="element3">第</td>
+                <td class="element3">戲</td>
+                <td class="element3">劇</td>
+                <td class="element3">歲</td>
+                <td class="element3">築</td>
+                <td class="element3">般</td>
+                <td class="element7">處</td>
+                <td class="element3">遽</td>
+                <td class="element1">丸</td>
+                <td class="element7">塑</td>
+                <td class="element1">乙</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="card-container">
+        <div class="toggles">
+            <label>
+                <div class="toggle-switch">
+                    <input type="checkbox" onclick="toggleElement('element9', 'color9')">
+                    <div class="slider slider9"></div>
+                </div>
+                標準字根+V
+            </label>
+            <label>
+                <div class="toggle-switch">
+                    <input type="checkbox" onclick="toggleElement('element10', 'color10')">
+                    <div class="slider slider10"></div>
+                </div>
+                簡速字根+V
+            </label>
+            <label>
+                <div class="toggle-switch">
+                    <input type="checkbox" onclick="toggleElement('element11', 'color11')">
+                    <div class="slider slider11"></div>
+                </div>
+                頭尾碼+V
+            </label>
+            <label>
+                <div class="toggle-switch">
+                    <input type="checkbox" onclick="toggleElement('element12', 'color12')">
+                    <div class="slider slider12"></div>
+                </div>
+                形音義結合+V
+            </label>
+            <label>
+                <div class="toggle-switch">
+                    <input type="checkbox" onclick="toggleElement('element13', 'color13')">
+                    <div class="slider slider13"></div>
+                </div>
+                簡體字+V
+            </label>
+            <label>
+                <div class="toggle-switch">
+                    <input type="checkbox" onclick="toggleElement('element14', 'color14')">
+                    <div class="slider slider14"></div>
+                </div>
+                隨取兩碼+V
+            </label>
+            <label>
+                <div class="toggle-switch">
+                    <input type="checkbox" onclick="toggleElement('element15', 'color15')">
+                    <div class="slider slider15"></div>
+                </div>
+                一碼硬配+V
+            </label>
+            <label>
+                <div class="toggle-switch">
+                    <input type="checkbox" onclick="toggleElement('element16', 'color16')">
+                    <div class="slider slider16"></div>
+                </div>
+                已有兩碼
+            </label>
+            <label>
+                <div class="toggle-switch">
+                    <input type="checkbox" onclick="toggleText('text-to-hide')">
+                    <div class="slider slider17"></div>
+                </div>
+                隱藏罕用字（包含簡化字、俗體字與日本漢字）
+            </label>
+        </div>
+    </div>
+
+    <!-- 表格 -->
+    <div class="card-container">
+        <table>
+            <tr>
+                <th class="borderRight"></th>
+                <th>族</th>
+                <th>善</th>
+                <th>覆</th>
+                <th>召</th>
+                <th>峻</th>
+                <th>區</th>
+                <th>干</th>
+                <th>惟</th>
+                <th>試</th>
+                <th>擁</th>
+                <th>兵</th>
+                <th>確</th>
+                <th>行</th>
+                <th>久</th>
+                <th>品</th>
+                <th>泉</th>
+                <th>懼</th>
+                <th>臨</th>
+                <th>線</th>
+                <th>模</th>
+                <th>越</th>
+                <th>、</th>
+                <th>巫</th>
+                <th>贏</th>
+                <th>土</th>
+                <th>處</th>
+            </tr>
+            <tr>
+                <th class="borderRight"></th>
+                <th>A</th>
+                <th>B</th>
+                <th>C</th>
+                <th>D</th>
+                <th>E</th>
+                <th>F</th>
+                <th>G</th>
+                <th>H</th>
+                <th>I</th>
+                <th>J</th>
+                <th>K</th>
+                <th>L</th>
+                <th>M</th>
+                <th>N</th>
+                <th>O</th>
+                <th>P</th>
+                <th>Q</th>
+                <th>R</th>
+                <th>S</th>
+                <th>T</th>
+                <th>U</th>
+                <th>V</th>
+                <th>W</th>
+                <th>X</th>
+                <th>Y</th>
+                <th>Z</th>
+            </tr>
+            <tr>
+                <th class="borderRight">A</th>
+                <td class="element9">、</td>
+                <td class="element13 text-to-hide">鎭</td>
+                <td></td>
+                <td class="element13 text-to-hide">会</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="element14">銜</td>
+                <td></td>
+                <td class="element11">鐵</td>
+                <td class="element10">龍</td>
+                <td></td>
+                <td class="element10">矣</td>
+                <td class="element11">鋁</td>
+                <td></td>
+                <td></td>
+                <td class="element11">划</td>
+                <td></td>
+                <td class="element14">銜</td>
+                <td class="element12">奧</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th class="borderRight">B</th>
+                <td class="element15">慈</td>
+                <td class="element11">鄭</td>
+                <td></td>
+                <td class="element11">剪</td>
+                <td class="element11">翁</td>
+                <td class="element11">斃</td>
+                <td></td>
+                <td class="element11">慈</td>
+                <td class="element11">羨</td>
+                <td class="element16">障</td>
+                <td></td>
+                <td class="element11">陋</td>
+                <td class="element11">貧</td>
+                <td class="element9 text-to-hide">乀</td>
+                <td class="element10">舍</td>
+                <td class="element11">陵</td>
+                <td></td>
+                <td class="element16">介</td>
+                <td class="element16">凍</td>
+                <td></td>
+                <td class="element11">阪</td>
+                <td></td>
+                <td class="element11">遂</td>
+                <td class="element10">敝</td>
+                <td class="element11">陵</td>
+                <td></td>
+            </tr>
+            <tr>
+                <th class="borderRight">C</th>
+                <td class="element9">虫</td>
+                <td class="element11">咫</td>
+                <td class="element11">飄</td>
+                <td class="element11">蟆</td>
+                <td class="element10">盍</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="element11">軾</td>
+                <td class="element16">中</td>
+                <td></td>
+                <td class="element13">蠣</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="element16">履</td>
+                <td class="element11">蠔</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="element11">臀</td>
+                <td class="element16">履</td>
+                <td class="element11">迺</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th class="borderRight">D</th>
+                <td></td>
+                <td class="element11">殯</td>
+                <td class="element11">殃</td>
+                <td class="element11">奢</td>
+                <td class="element11">旦</td>
+                <td class="element11">駕</td>
+                <td></td>
+                <td></td>
+                <td class="element10 text-to-hide">耑</td>
+                <td></td>
+                <td></td>
+                <td class="element10 text-to-hide">曷</td>
+                <td></td>
+                <td></td>
+                <td class="element9">曰</td>
+                <td></td>
+                <td></td>
+                <td class="element11">冕</td>
+                <td></td>
+                <td></td>
+                <td class="element11">脅</td>
+                <td class="element11">曜</td>
+                <td class="element11">逗</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th class="borderRight">E</th>
+                <td class="element11">兔</td>
+                <td class="element11">翼</td>
+                <td></td>
+                <td class="element11">貘</td>
+                <td></td>
+                <td class="element13 text-to-hide">灵</td>
+                <td></td>
+                <td></td>
+                <td class="element9">爪</td>
+                <td class="element9">聿</td>
+                <td></td>
+                <td class="element10">免</td>
+                <td></td>
+                <td class="element9">爪</td>
+                <td class="element9">酉</td>
+                <td class="element10 text-to-hide">昜</td>
+                <td></td>
+                <td class="element11">貌</td>
+                <td class="element11">舜</td>
+                <td></td>
+                <td></td>
+                <td class="element11">雞</td>
+                <td></td>
+                <td class="element10">爰</td>
+                <td class="element16">酬</td>
+                <td></td>
+            </tr>
+            <tr>
+                <th class="borderRight">F</th>
+                <td class="element13">壽</td>
+                <td class="element16">旗</td>
+                <td class="element11 text-to-hide">艷</td>
+                <td class="element14">侯</td>
+                <td class="element9">皿</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="element9 text-to-hide">丱</td>
+                <td class="element9 text-to-hide">丰</td>
+                <td class="element11">匠</td>
+                <td class="element9">匕</td>
+                <td></td>
+                <td class="element10">奏</td>
+                <td class="element16">營</td>
+                <td class="element9 text-to-hide">户</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="element11">頃</td>
+                <td class="element11">肓</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="element11">旋</td>
+            </tr>
+            <tr>
+                <th class="borderRight">G</th>
+                <td></td>
+                <td class="element11">嬪</td>
+                <td></td>
+                <td class="element11">舅</td>
+                <td class="element9">臼</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="element13">喬</td>
+                <td class="element16">干</td>
+                <td></td>
+                <td class="element9 text-to-hide">乇</td>
+                <td></td>
+                <td class="element16">瓜</td>
+                <td class="element10">喬</td>
+                <td class="element9 text-to-hide">爿</td>
+                <td></td>
+                <td class="element13 text-to-hide">剰</td>
+                <td class="element13 text-to-hide">乗</td>
+                <td class="element11">婷</td>
+                <td></td>
+                <td></td>
+                <td class="element13 text-to-hide">迁</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th class="borderRight">H</th>
+                <td></td>
+                <td class="element11">懶</td>
+                <td class="element11">秧</td>
+                <td></td>
+                <td class="element11">恆</td>
+                <td></td>
+                <td></td>
+                <td class="element13 text-to-hide">穏</td>
+                <td></td>
+                <td class="element9">乎</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="element9">禾</td>
+                <td class="element10">者</td>
+                <td></td>
+                <td></td>
+                <td class="element16">悅</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="element10 text-to-hide">夋</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th class="borderRight">I</th>
+                <td class="element13 text-to-hide">応</td>
+                <td></td>
+                <td class="element11">諷</td>
+                <td class="element11">謨</td>
+                <td></td>
+                <td></td>
+                <td class="element11">詫</td>
+                <td></td>
+                <td class="element16">試</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="element9 text-to-hide">訁</td>
+                <td></td>
+                <td></td>
+                <td class="element11">誡</td>
+                <td></td>
+                <td class="element11">諪</td>
+                <td></td>
+                <td></td>
+                <td class="element11">汞</td>
+                <td class="element10">曳</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th class="borderRight">J</th>
+                <td class="element11">搏</td>
+                <td class="element11">顛</td>
+                <td></td>
+                <td class="element11">摸</td>
+                <td></td>
+                <td></td>
+                <td class="element11">掐</td>
+                <td></td>
+                <td class="element11">拭</td>
+                <td class="element11">抉</td>
+                <td class="element11">喪</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="element11">扣</td>
+                <td class="element11">掛</td>
+                <td></td>
+                <td class="element11">攝</td>
+                <td class="element11">揀</td>
+                <td></td>
+                <td></td>
+                <td class="element11">截</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="element11">挖</td>
+            </tr>
+            <tr>
+                <th class="borderRight">K</th>
+                <td class="element11">斥</td>
+                <td class="element11">邢</td>
+                <td></td>
+                <td></td>
+                <td class="element9">壬</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="element13 text-to-hide">幵</td>
+                <td class="element9 text-to-hide">丂</td>
+                <td class="element9 text-to-hide">尢</td>
+                <td></td>
+                <td class="element10">癸</td>
+                <td class="element11">碧</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="element16">廷</td>
+                <td class="element10 text-to-hide">戔</td>
+                <td class="element11">琴</td>
+                <td class="element11">璇</td>
+            </tr>
+            <tr>
+                <th class="borderRight">L</th>
+                <td class="element13">離</td>
+                <td class="element11">腐</td>
+                <td></td>
+                <td class="element11">瘼</td>
+                <td class="element11">碰</td>
+                <td></td>
+                <td class="element11">亳</td>
+                <td class="element11">摩</td>
+                <td></td>
+                <td class="element11">耕</td>
+                <td></td>
+                <td class="element9 text-to-hide">乚</td>
+                <td class="element11">毫</td>
+                <td class="element10">襄</td>
+                <td class="element11">碉</td>
+                <td></td>
+                <td class="element11">豪</td>
+                <td class="element11">亮</td>
+                <td class="element11">砂</td>
+                <td class="element11">亭</td>
+                <td class="element11">膏</td>
+                <td class="element11">魔</td>
+                <td></td>
+                <td class="element13 text-to-hide">亱</td>
+                <td class="element11">座</td>
+                <td class="element11">症</td>
+            </tr>
+            <tr>
+                <th class="borderRight">M</th>
+                <td class="element11">馳</td>
+                <td class="element14">贍</td>
+                <td class="element11">騷</td>
+                <td class="element11 text-to-hide">糢</td>
+                <td class="element11">翻</td>
+                <td></td>
+                <td></td>
+                <td class="element11">悶</td>
+                <td></td>
+                <td class="element11">賊</td>
+                <td class="element16">駐</td>
+                <td></td>
+                <td></td>
+                <td class="element9">釆</td>
+                <td class="element11">貼</td>
+                <td class="element11">御</td>
+                <td class="element11">閥</td>
+                <td class="element11">贓</td>
+                <td class="element11">瞬</td>
+                <td class="element11 text-to-hide">閑</td>
+                <td class="element11">販</td>
+                <td class="element11">彿</td>
+                <td></td>
+                <td class="element13">驅</td>
+                <td></td>
+                <td class="element11">徒</td>
+            </tr>
+            <tr>
+                <th class="borderRight">N</th>
+                <td class="element9">寅</td>
+                <td class="element11">賓</td>
+                <td></td>
+                <td class="element11">寞</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="element16">巾</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="element11">彫</td>
+                <td class="element10 text-to-hide">罙</td>
+                <td class="element11">宮</td>
+                <td class="element11">竅</td>
+                <td class="element11">窮</td>
+                <td class="element11">割</td>
+                <td></td>
+                <td></td>
+                <td class="element11">寂</td>
+                <td class="element11">雕</td>
+                <td></td>
+                <td></td>
+                <td class="element9 text-to-hide">冖</td>
+                <td></td>
+            </tr>
+            <tr>
+                <th class="borderRight">O</th>
+                <td class="element10 text-to-hide">僉</td>
+                <td class="element11">鄙</td>
+                <td></td>
+                <td class="element11">獸</td>
+                <td class="element14">噩</td>
+                <td class="element16">跡</td>
+                <td></td>
+                <td></td>
+                <td class="element9 text-to-hide">戼</td>
+                <td class="element13 text-to-hide">单</td>
+                <td class="element10 text-to-hide">咢</td>
+                <td></td>
+                <td></td>
+                <td class="element11">喃</td>
+                <td class="element11">回</td>
+                <td></td>
+                <td class="element11">嚎</td>
+                <td></td>
+                <td></td>
+                <td class="element11">呆</td>
+                <td></td>
+                <td class="element11">躍</td>
+                <td></td>
+                <td class="element11">毋</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th class="borderRight">P</th>
+                <td class="element11">俯</td>
+                <td class="element11">儐</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="element11">俾</td>
+                <td class="element11">您</td>
+                <td class="element16">片</td>
+                <td class="element10 text-to-hide">辟</td>
+                <td class="element16">粵</td>
+                <td></td>
+                <td class="element11">侮</td>
+                <td class="element11">佩</td>
+                <td class="element11">侶</td>
+                <td class="element11 text-to-hide">倣</td>
+                <td class="element11 text-to-hide">儫</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="element13">僅</td>
+                <td></td>
+                <td></td>
+                <td class="element9 text-to-hide">攵</td>
+                <td class="element11">仕</td>
+                <td></td>
+            </tr>
+            <tr>
+                <th class="borderRight">Q</th>
+                <td></td>
+                <td></td>
+                <td class="element13 text-to-hide">独</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="element10">卓</td>
+                <td></td>
+                <td></td>
+                <td class="element11">疊</td>
+                <td class="element11">獅</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="element11">髒</td>
+                <td class="element11">纍</td>
+                <td></td>
+                <td class="element11">胃</td>
+                <td></td>
+                <td class="element11">髓</td>
+                <td></td>
+                <td class="element11">壘</td>
+                <td></td>
+            </tr>
+            <tr>
+                <th class="borderRight">R</th>
+                <td class="element11">耐</td>
+                <td class="element11">賢</td>
+                <td></td>
+                <td class="element11">暮</td>
+                <td class="element10 text-to-hide">雚</td>
+                <td class="element11">燕</td>
+                <td></td>
+                <td class="element11">祥</td>
+                <td class="element14">衖</td>
+                <td class="element9 text-to-hide">廾</td>
+                <td class="element11">聘</td>
+                <td class="element9">几</td>
+                <td></td>
+                <td class="element11">幕</td>
+                <td class="element9">廿</td>
+                <td class="element11">茂</td>
+                <td></td>
+                <td class="element11">藏</td>
+                <td class="element11">蔬</td>
+                <td class="element14">衖</td>
+                <td></td>
+                <td></td>
+                <td class="element16">邁</td>
+                <td class="element10">散</td>
+                <td class="element11">墓</td>
+                <td class="element11 text-to-hide">荐</td>
+            </tr>
+            <tr>
+                <th class="borderRight">S</th>
+                <td class="element9">糸</td>
+                <td class="element11">繽</td>
+                <td></td>
+                <td class="element11">緒</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="element11">掌</td>
+                <td class="element9">个</td>
+                <td class="element9 text-to-hide">卅</td>
+                <td></td>
+                <td class="element10 text-to-hide">巤</td>
+                <td></td>
+                <td class="element11">幣</td>
+                <td class="element11 text-to-hide">躳</td>
+                <td class="element16">繳</td>
+                <td></td>
+                <td class="element11">弊</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="element16">耀</td>
+                <td class="element16">線</td>
+                <td class="element15">敞</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th class="borderRight">T</th>
+                <td class="element9">云</td>
+                <td class="element11">檳</td>
+                <td class="element13 text-to-hide">梦</td>
+                <td class="element16">模</td>
+                <td></td>
+                <td></td>
+                <td class="element11">柑</td>
+                <td></td>
+                <td class="element11">歌</td>
+                <td class="element10 text-to-hide">甬</td>
+                <td></td>
+                <td></td>
+                <td class="element11">梅</td>
+                <td></td>
+                <td class="element12">凸</td>
+                <td></td>
+                <td class="element11">杖</td>
+                <td></td>
+                <td class="element16">禁</td>
+                <td class="element11">樑</td>
+                <td></td>
+                <td></td>
+                <td class="element11">隸</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th class="borderRight">U</th>
+                <td class="element9 text-to-hide">厶</td>
+                <td class="element11">臏</td>
+                <td></td>
+                <td class="element11">膜</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="element16">鮮</td>
+                <td class="element9 text-to-hide">凵</td>
+                <td class="element13">於</td>
+                <td></td>
+                <td></td>
+                <td class="element11">膨</td>
+                <td></td>
+                <td class="element11">凹</td>
+                <td class="element16">腳</td>
+                <td></td>
+                <td class="element11">臟</td>
+                <td></td>
+                <td></td>
+                <td class="element11">霸</td>
+                <td class="element11">霍</td>
+                <td class="element16">靈</td>
+                <td></td>
+                <td></td>
+                <td class="element11 text-to-hide">脚</td>
+            </tr>
+            <tr>
+                <th class="borderRight">V</th>
+                <td></td>
+                <td class="element11">鬢</td>
+                <td></td>
+                <td></td>
+                <td class="element9">隹</td>
+                <td class="element11">矩</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="element11">囊</td>
+                <td class="element13 text-to-hide">覧</td>
+                <td></td>
+                <td class="element10 text-to-hide">菐</td>
+                <td class="element10">奇</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="element16">複</td>
+                <td class="element16">萬</td>
+                <td></td>
+            </tr>
+            <tr>
+                <th class="borderRight">W</th>
+                <td class="element16">為</td>
+                <td class="element11">濱</td>
+                <td></td>
+                <td class="element11">漠</td>
+                <td class="element9">巫</td>
+                <td></td>
+                <td></td>
+                <td class="element11">涂</td>
+                <td class="element14">衙</td>
+                <td class="element10">韋</td>
+                <td class="element11">湛</td>
+                <td class="element16">溉</td>
+                <td class="element11">澎</td>
+                <td class="element9 text-to-hide">氶</td>
+                <td class="element11">吝</td>
+                <td></td>
+                <td></td>
+                <td class="element13">劉</td>
+                <td></td>
+                <td class="element14">衍</td>
+                <td></td>
+                <td class="element11">沸</td>
+                <td class="element11">斌</td>
+                <td></td>
+                <td class="element11">塗</td>
+                <td class="element11">漩</td>
+            </tr>
+            <tr>
+                <th class="borderRight">X</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="element11">弒</td>
+                <td class="element10">覃</td>
+                <td></td>
+                <td class="element9">黽</td>
+                <td></td>
+                <td class="element9 text-to-hide">飠</td>
+                <td class="element11">餉</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="element9 text-to-hide">乂</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th class="borderRight">Y</th>
+                <td class="element11">壽</td>
+                <td></td>
+                <td class="element13 text-to-hide">声</td>
+                <td></td>
+                <td class="element16">土</td>
+                <td class="element13">鹽</td>
+                <td></td>
+                <td></td>
+                <td class="element9">丫</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="element11">彭</td>
+                <td class="element9 text-to-hide">乁</td>
+                <td class="element16">嘉</td>
+                <td></td>
+                <td class="element11">壕</td>
+                <td></td>
+                <td class="element11">疏</td>
+                <td></td>
+                <td class="element11">鼓</td>
+                <td></td>
+                <td></td>
+                <td class="element10 text-to-hide">夌</td>
+                <td class="element9 text-to-hide">乀</td>
+                <td></td>
+            </tr>
+            <tr>
+                <th class="borderRight">Z</th>
+                <td class="element16">丸</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="element9 text-to-hide">孒</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="element9 text-to-hide">卂</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="element11">篩</td>
+                <td></td>
+                <td class="element11">齡</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="element11">齡</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="element9">孑</td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+    </main>
+</body>
+</html>
